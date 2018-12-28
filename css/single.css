@@ -18,7 +18,7 @@
 body{
     color: #555;
     background: #fafafa;
-    font-weight: lighter;
+    font-weight: normal;
     transition: margin .3s, background .3s;
 }
 
@@ -49,7 +49,26 @@ body::-webkit-scrollbar{
 a{ color: #6f9fc7 }
 a:hover{ color: #9fcff7 }
 
-h1, h2, h3, h4, h5, h6{ font-weight: normal }
+body.neon h1{
+  background: #999;
+  color: black;
+}
+
+h1 {
+  position: relative;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 15px;
+    border-left: 4px solid #6f9fc7;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: #f5f7f7;
+}
+
+
+
+h1, h2, h3, h4, h5, h6{ font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei","Microsoft Yahei", sans-serif; }
 
 hr{ border-color: #eee }
 
@@ -364,7 +383,12 @@ main img{
     animation: fade-in-bottom .3s both; -webkit-animation: fade-in-bottom .3s both;
 }
 
-.home-title h1{ color: #6e8aad }
+.home-title h1{ 
+  color: #6e8aad;
+  border-left: transparent;
+  background-color: transparent;
+  font-weight: bold;
+}
 
 .home-title span{
     display: block;
@@ -375,8 +399,6 @@ main img{
 /* - 头像 */
 .home-title img{
     max-width: 150px;
-    border-radius: 100%;
-    border: 3px solid #fff;
     margin-bottom: 1em;
 }
 
@@ -412,6 +434,7 @@ main img{
     padding-bottom: .3rem;
     border-bottom: 2px solid #eee;
     transition: color .3s, border .3s;
+    font-size: 21px;
 }
 
 .post-item .edit-link{
@@ -501,6 +524,7 @@ main img{
 .post-content h3:before, .page-content h3:before{
     opacity: .5;
     content: "#";
+   color: red;
     margin-right: .3em;
 }
 .post-content h1:before, .page-content h1:before{ font-weight: bold }
@@ -766,3 +790,43 @@ footer .sub-footer{
 }
 
 footer .sub-footer p{ font-size: .875em }
+/* WordFrame */
+.black {
+ border-width: 1px 4px 4px 1px;
+ border-style: solid;
+ border-color: #3e3e3e;
+ margin: 10px 0;
+ padding: 15px 15px 15px 35px;
+}
+
+.xxk {
+ border: 2px dashed rgb(41, 170, 227);
+ background-color: rgb(248, 247, 245);
+ margin: 10px 0;
+ padding: 15px 15px 15px 35px;
+}
+
+.greenblock {
+ margin: 10px 0;
+ padding: 10px 15px;
+ border: 1px solid #e3e3e3;
+ border-left: 2px solid #05B536;
+ background: #FFF;
+}
+
+.redblock {
+ margin: 10px 0;
+ padding: 10px 15px;
+ border: 1px solid #e3e3e3;
+ border-left: 2px solid #ED0505;
+ background: #FFF;
+}
+
+.orangeblock {
+ margin: 10px 0;
+ padding: 10px 15px;
+ border: 1px solid #e3e3e3;
+ border-left: 2px solid #EC8006;
+ background: #FFF;
+}
+.div-inline{ display:inline} 
