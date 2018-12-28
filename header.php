@@ -18,6 +18,7 @@
     <link href="<?php $this->options->themeUrl('css/kico.css'); ?>" rel="stylesheet" type="text/css"/>
     <link href="<?php $this->options->themeUrl('css/single.css'); ?>" rel="stylesheet" type="text/css"/>
     <link href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
 <?php else: ?>
     <link href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Single/css/kico.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdn.jsdelivr.net/gh/Dreamer-Paul/Single/css/single.css" rel="stylesheet" type="text/css"/>
@@ -42,10 +43,10 @@
 <![endif]-->
 <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw='); ?>
 </head>
-<body<?php if($_COOKIE["night"] == "true"): ?> class="neon"<?php endif; ?>>
+<body>
 <header>
     <div class="head-title">
-        <h4><?php $this->options->title() ?></h4>
+      <a href="<?php $this->options ->siteUrl(); ?>"><h4><?php $this->options->title() ?></h4></a>
     </div>
     <div class="toggle-btn"></div>
     <div class="light-btn"></div>
@@ -61,6 +62,7 @@
                 <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
             </ul>
         </li>
+        <li><a href="https://file.nevous.com" target="_blank">文件下载</a>
         <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
     </ul>
 </header>

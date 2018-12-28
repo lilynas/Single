@@ -18,7 +18,7 @@ $this->need('header.php');
 <main>
     <div class="wrap min">
         <section class="home-title">
-            <h1><?php $this->options->title() ?></h1>
+          <a href="https://lilynas.com"><img border="0" src="https://lilynas.com/usr/uploads/logo.png" /></a>
             <span><?php $this->options->description() ?></span>
 <?php if ($this->options->home_social): ?>
             <div class="home-social">
@@ -30,7 +30,7 @@ $this->need('header.php');
             <?php while($this->next()): ?>
             <div class="post-item">
                 <h2>
-                    <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                    <a href="<?php $this->permalink() ?>"><?php $this->sticky(); $this->title() ?></a>
                     <?php if($this->authorId == $this->user->uid): ?> <a class="edit-link" href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" target="_blank">编辑</a><?php endif; ?>
                 </h2>
                 <p><?php $this->excerpt(100); ?></p>
